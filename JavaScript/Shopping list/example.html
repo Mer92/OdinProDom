@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping list example</title>
+    <title>Shopping list example exercise</title>
     <style>
       li {
         margin-bottom: 10px;
@@ -32,28 +32,38 @@
 
     <script>
         let unList = document.querySelector('#ul');
-        let input = document.querySelector('#input');
-        let button = document.querySelector('#button');
+        let  input = document.querySelector('#input');
+        let   button = document.querySelector('#button');
        
-        function click(){
-            let value = input;
-            value = '';
+          function btnclick() {
+             let value = input;
+             value = '';
+
+             let  item = document.createElement('li');
+             unList.appendChild(item);
+             
+             let  span = document.createElement('span');
+             item.appendChild(span);
+             span.textContent = value;
+
+             let  btn = document.createElement('button');            
+             item.appendChild(btn);                 
+             btn.textContent = 'Delete'; 
+
+             function btnDelete(){
+
+              btn.item.removeChild(btn);
+             }
+
+             btn.onclick = btnDelete;
+
+              // btn.onclick = click();
+              // focus(input); 
+
+            }
 
 
-            let item = document.querySelector('#li');
-            let span = document.querySelector('#span');
-            let btn = document.querySelector('#button');
-            
-            item.appendChild(btn);
-            item.appendChild(btn);
-
-            span.textContent = value;
-            btn.textContent = 'Delete'; 
-
-            unList.appendChild(item);
-
-            
-        }
+       
     </script>
   </body>
 </html>
