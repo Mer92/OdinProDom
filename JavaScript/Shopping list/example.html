@@ -36,8 +36,9 @@
         let   button = document.querySelector('#button');
        
           function btnclick() {
-             let value = input;
-             value = '';
+
+             let value = input.value = '';
+           
 
              let  item = document.createElement('li');
              unList.appendChild(item);
@@ -50,15 +51,6 @@
              item.appendChild(btn);                 
              btn.textContent = 'Delete'; 
 
-             function btnDelete(){
-
-              btn.item.removeChild(btn);
-             }
-
-             btn.onclick = btnDelete;
-
-              // btn.onclick = click();
-              // focus(input); 
 
             }
 
